@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网址导航</title>
+
+    <link rel="icon" href="tt.ico" type="image/x-icon">
+
+
+    <style>  
+
+    body {  
+            margin: 0;  
+            padding: 0;  
+            height: 100vh;  
+            background-image: url('01.jpg');  
+            background-size: cover;  
+            background-repeat: no-repeat;  
+            background-position: center;  
+        }  
+
+
+
+        .time-container {  
+            font-size: 18px;  
+            font-weight: bold;  
+            margin-top: 20px;  
+            color: white;
+            text-align: center;  
+        }  
+        .container {  
+            display: flex;  
+            flex-wrap: wrap; /* 允许项目换行 */  
+            gap: 20px; /* 设置项目之间的间距 */  
+            justify-content: start; /* 左对齐项目 */  
+        }  
+        .link-group {  
+            display: flex;  
+            flex-direction: column; /* 垂直排列链接 */  
+            padding: 10px;  
+            border: 1px solid #ccc;  
+            border-radius: 5px;  
+            width: calc(25% - 20px); /* 设置宽度，减去间距 */  
+            box-sizing: border-box; /* 包含边框和内边距在宽度内 */  
+        }  
+        .link-group h2 {  
+            margin-top: 0;  
+            margin-bottom: 10px;  
+            font-size: 16px;  
+            text-align: center;  
+        }  
+        .link-group a {  
+            display: block;  
+            padding: 8px;  
+            text-align: center;  
+            color: white;  
+            text-decoration: none;  
+            border: 1px solid white;  
+            border-radius: 3px;  
+            margin-bottom: 5px;  
+            transition: background-color 0.3s;  
+        }  
+        .link-group a:hover {  
+            background-color:palevioletred;  
+        }  
+    </style>  
+    <script>  
+        // JavaScript function to get the current time and display it in the div  
+        function displayCurrentTime() {  
+            const now = new Date();  
+            const currentTime = now.toLocaleString(); // Adjust this to your locale if needed  
+            document.getElementById('time').innerText = `${currentTime}`;  
+        }  
+  
+        // Run the function when the page loads  
+        window.onload = displayCurrentTime;  
+  
+        // Optionally, update the time every second (1000 milliseconds)  
+        setInterval(displayCurrentTime, 1000);  
+    </script>  
+
+
+
+</head>
+<body>
+    <h3>网址导航</h3>
+    <div id="time" class="time-container"></div>  
+    <br>
+    <div class="container">  
+        <div class="link-group">  
+            <h2>Sharepoint</h2>  
+            <a href="https://endresshauser.sharepoint.com/teams/ou0000945/Shared%20Documents/Forms/AllItems.aspx" target="_blank">Operation</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/wg0002483/Shared%20Documents/Forms/AllItems.aspx" target="_blank">IE</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/wg0003799/SitePages/GroupOverview.aspx" target="_blank">Operation Lean</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/pg0001223/SitePages/GroupOverview.aspx" target="_blank">PSR</a>  
+            <a href="https://endresshauser.sharepoint.com/sites/app0000032/QDMS_EH_FL/Forms/Compact.aspx?useFiltersInViewX
+            ml=1&FilterFields1=EHQDMS%5FDocOwner&FilterValues1=%5BMe%5D%3B%23Zhang%20Rong&FilterTypes1=User&FilterOp1=In&OR=Teams%2DHL&CT=1718757434209&clickparams=e
+            yJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA1MDMwNzYxNyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D" target="_blank">WI</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/wg0003787/SitePages/GroupOverview.aspx" target="_blank">FL CN Leanproject</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/ou0001192/Shared%20Documents/General" target="_blank">FL CN Supply Chain</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/wg0003098/Shared%20Documents/Forms/AllItems.aspx" target="_blank">Lean in flow</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/wg0003590/SitePages/GroupOverview.aspx" target="_blank">Power BI</a>  
+        </div>  
+        <div class="link-group">  
+            <h2>Microsoft</h2>  
+            
+            <a href="https://endresshauser.sharepoint.com/sites/app0000020/SitePages/Home.aspx?ovuser=52daf2a9-3b73-4da4-ac6a-3f81adc92b7e%2cx
+            iaofeng.liu%40endress.com&OR=Teams-HL&CT=1719493510855&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA1MTYyMjI
+            yMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3d%3d&CID=9abf36a1-d02c-9000-161d-d066c9aa9c85&cidOR=SPO" target="_blank">管理组</a>  
+            
+            <a href="https://make.powerautomate.com/environments/Default-52daf2a9-3b73-4da4-ac6a-3f81adc92b7e/home" target="_blank">Power Automate</a>  
+            <a href="https://make.powerapps.com/environments/Default-52daf2a9-3b73-4da4-ac6a-3f81adc92b7e/home" target="_blank">Power Apps</a>  
+			 <a href="https://app.powerbi.com/groups/me/list?tenant=52daf2a9-3b73-4da4-ac6a-3f81adc92b7e&experience=power-bi" target="_blank">Power BI</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/ou0000945/Lists/List/AllItems.aspx" target="_blank">List 培训申请</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/ou0000945/Lists/Operation%20Muda%20Collection/AllItems.aspx" target="_blank">List Muda</a>  
+            <a href="https://endresshauser.sharepoint.com/teams/ou0000945/Lists/CIP%20Request/AllItems.aspx" target="_blank">List CIP</a>  
+
+
+            
+        </div>  
+
+        <div class="link-group">  
+            <h2>常用</h2>  
+            <a href="https://eh.condecosoftware.com/login/TransferToSite.aspx?logout=1" target="_blank">会议室管理</a>  
+            <a href="http://online.safecoo.com/index.php/login" target="_blank">安酷</a>  
+            <a href="https://doc.vistable.com/help/vtt3/en/index.html" target="_blank">vis-Table 官网</a>  
+            <a href="https://powerbithemegenerator.bibb.pro/" target="_blank">Power BI 模板</a>  
+            <a href="https://miro.com/signup/" target="_blank">Miro</a>  
+            <a href="https://leanbase.de/games/" target="_blank">Lean Game</a>  
+            <a href="https://infoserve.eu10.sapanalytics.cloud/sap/fpa/ui/app.html#/home" target="_blank">SAC</a>  
+        </div>  
+
+		<div class="link-group">  
+            <h2>BI网址</h2>  
+            
+            <a href="file:///K:/DS-P/IE-DataShare/%E6%97%A5%E6%8A%A5%E7%BD%91%E9%A1%B5%E7%89%88/Operation%20%E7%8E%B0%E5%9C%BA%E7%94%9F%E4%BA%A7%E7%8A%B6%E6%80%81%20v4.4.html" target="_blank">日报</a>  
+			
+			<a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUMktXSkxQWDlZUllNWk1YREdNR09JVEszUi4u" target="_blank">填Muda</a>  
+			
+			
+			
+			
+        </div>  
+
+</body>
+</html>
