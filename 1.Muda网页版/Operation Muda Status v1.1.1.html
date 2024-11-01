@@ -1,0 +1,212 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>FL CN Operation Muda Status</title>  
+
+    <style>
+
+        a:link, a:visited, a:hover, a:active {  
+                color:black;  
+                text-decoration: none;  
+            }  
+
+
+        html, body {  
+        height: 100%; /* 确保body高度与屏幕高度一致 */  
+        margin: 0; /* 移除默认边距 */  
+        }  
+        
+        .container {  
+        display: flex;  
+        justify-content: space-between; /* 水平分布子元素 */  
+        height: 5vh; /* 设置容器高度为屏幕高度的5% */  
+        align-items: center; /* 垂直居中子元素 */  
+        }  
+        
+        .left {  
+        display: flex;  
+        align-items: center; /* 垂直居中文字 */  
+        justify-content: left; /* 水平居中文字（如果需要） */  
+        flex: 1; /* 默认情况下，所有子元素平分剩余空间 */  
+        /* 由于我们想要中间元素占据更多空间，可以稍后调整它的flex属性 */  
+        }  
+        
+        .right {  
+        display: flex;  
+        align-items: center; /* 垂直居中文字 */  
+        justify-content: RIGHT; /* 水平居中文字（如果需要） */  
+        flex: 1; /* 默认情况下，所有子元素平分剩余空间 */  
+        /* 由于我们想要中间元素占据更多空间，可以稍后调整它的flex属性 */  
+        }  
+
+        .center {  
+            display: flex;  
+            align-items: center; /* 垂直居中文字 */  
+            justify-content: center; /* 水平居中文字（如果需要） */  
+            flex: 1; /* 默认情况下，所有子元素平分剩余空间 */  
+            /* 由于我们想要中间元素占据更多空间，可以稍后调整它的flex属性 */  
+        }  
+
+        .left span, .right span {  
+            font-size: calc(5vh * 0.4 * 0.8); /* 假设容器高度5vh, 文字占50%, 再考虑行高因素调整（0.8为行高调整系数） */  
+            line-height: calc(5vh * 0.); /* 行高设为容器高度的50% */  
+        }  
+        
+        .center {  
+        flex: 2; /* 中间元素占据两倍于两边的空间 */  
+        }  
+        
+        .center span {  
+        font-size: calc(5vh * 0.8 * 0.8); /* 文字占容器的80%，再考虑行高因素调整 */  
+        line-height: calc(5vh * 0.8); /* 行高设为容器高度的80% */  
+        }  
+        
+        /* 样式美化，非必需 */  
+        .container { background-color: rgb(233, 231, 238); }  
+        /* .center { background-color: lightgreen; }   */
+        /* .right { background-color: lightcoral; } */
+
+        .iframe-container {  
+        display: flex; /* 使用flex布局 */  
+        margin: 0;  
+        padding: 0;  
+        width: 100%; /* 容器宽度占满整个视口 */  
+        height: 95vh; /* 容器高度占视口的95% */  
+        overflow: hidden; /* 防止滚动条出现 */  
+        }  
+        
+        /* 设置第一个 iframe，占宽度的80% */  
+        .iframe-a {  
+            width: 90%;  
+            height: 100%; /* 高度占满容器 */  
+            border: none; /* 移除 iframe 边框 */  
+        }  
+        
+        /* 设置第二个 iframe，占宽度的20% */  
+        .iframe-b {  
+            width: 10%;  
+            height: 100%; /* 高度占满容器 */  
+            border: none; /* 移除 iframe 边框 */  
+        }
+
+        .iframe-r {  
+            width: 10%;  
+            height: 100%; /* 高度占满容器 */  
+            border: none; /* 移除 iframe 边框 */  
+        }
+
+
+    </style>
+
+    <script>  
+        // function updateHTML() {  
+        //     const now = new Date();  
+        //     const minutes = now.getMinutes();  
+
+        //         // 使用数组和includes简化分钟检查  
+        //     if ([45].includes(minutes)) {  
+        //         // 重新加载整个网页  
+        //         location.reload();  
+        //     }  
+        // }  
+
+        // // 等待DOM完全加载后再执行  
+        // document.addEventListener('DOMContentLoaded', (event) => {  
+        //     // 立即执行一次以检查是否需要更新  
+        //     updateHTML();  
+        //     // 设置每分钟检查一次  
+        //     setInterval(updateHTML, 60000);  
+        // });
+        
+            // JavaScript function to get the current time and display it in the div  
+        function displayCurrentTime() {  
+            const now = new Date();  
+            const currentTime = now.toLocaleString(); // Adjust this to your locale if needed  
+            document.getElementById('time').innerText = `${currentTime}`;  
+        }  
+  
+        // Run the function when the page loads  
+        window.onload = displayCurrentTime;  
+  
+        // Optionally, update the time every second (1000 milliseconds)  
+        setInterval(displayCurrentTime, 1000);  
+            
+        
+    </script>
+
+</head>  
+<body>  
+    <div class="container">  
+        <div class="left">  
+            <span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUMktXSkxQWDlZUllNWk1YREdNR09JVEszUi4u" target="_blank" title="Muda提交" rel="nofollow">Muda提交</a></span>
+            <span>|</span>
+            <span><a href=" https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUQUwzT0tJNVBVTkdGOUNZSVdLUkZVMUkzNS4u" target="_blank" title="Muda申请关闭" rel="nofollow">Muda申请关闭</a></span>
+
+           
+
+            <!-- <span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUQTNGS0ZONzI1VVNUVlpTRUFQVDlHU0tURy4u" target="_blank" title="Muda提交" rel="nofollow">延期登记</a></span>   -->
+            <!-- <span>|</span>
+            <span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUMktXSkxQWDlZUllNWk1YREdNR09JVEszUi4u" target="_blank" title="Muda提交" rel="nofollow">延期登记</a></span>  
+            <span>|</span>
+            <span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUMktXSkxQWDlZUllNWk1YREdNR09JVEszUi4u" target="_blank" title="Muda提交" rel="nofollow">延期登记</a></span>   -->
+        </div>  
+
+        <div class="center">  
+            <span>FL CN Operation Muda Status</span>  
+        </div>  
+
+        <div class="right">  
+            <span id="time"></span>  
+        </div>  
+    </div>  
+
+
+<div class="iframe-container">  
+    <iframe class="iframe-a" src="https://app.powerbi.com/reportEmbed?reportId=280a0af5-cd74-49ce-8ff8-80fa3984faf1&autoAuth=true&ctid=52daf2a9-3b73-4da4-ac6a-3f81adc92b7e"></iframe>  
+    <!-- <iframe class="iframe-b" src="https://eh-chatgpt.endress.com/"> -->
+    <div class="iframe-r" >
+
+        <h2>Muda分类</h2>
+
+        <div style="font-weight: bold;">Over Production(过量生产/生产过剩):</div>
+        <div>我们正在做（内部）客户现在不需要的事情</div>
+        <div>举例：生产的产品数量超过客户需求或下一道工序的需求，导致产品积压</div>
+        <br>
+        <div style="font-weight: bold;">Inventory(库存):</div>
+        <div>我们的系统中处理了太多的材料、任务/工作。我们在搜索、排序、启动/停止行为和协调方面浪费了容量</div>
+        <div>举例：过多的原材料、在制品和成品库存造成的浪费</div>
+        <br>
+        <div style="font-weight: bold;">Waiting(等待):</div>
+        <div>随着等待时间增加浪费金钱和时间</div>
+        <div>举例：人员、设备、物料等在等待下一个动作或指令的时间浪费</div>
+        <br>
+        <div style="font-weight: bold;">Mistakes/Rework(缺陷/返工):</div>
+        <div>产品或服务在设计、生产、交付等环节中出现的不符合预期的问题</div>
+        <div>举例：设计上的不合理、原材料的质量问题、生产过程中的失误或控制不当等</div>
+        <br>
+        <div style="font-weight: bold;">Transportation(运输/搬运):</div>
+        <div>材料/或信息的过度流动浪费了能力和金钱</div>
+        <div>举例：不必要的物料搬运，如长距离搬运、重复搬运等。       </div>
+        <br>
+        <div style="font-weight: bold;">Movement(动作浪费):</div>
+        <div>不必要的动作造成的能力和资金浪费</div>
+        <div>举例：在工位上的弯腰、转身、伸手过长等        </div>
+        <br>
+        <div style="font-weight: bold;">Process Overachieving(过度加工/过程浪费):</div>
+        <div>由于缓慢、昂贵、过度设计的流程造成的资金和产能浪费，可以按实际要求交付更多产品</div>
+        <div>举例：对产品进行不必要的加工或过度加工所造成的浪费</div>
+        <br>
+        <div style="font-weight: bold;">Underutilized Talent(人才浪费):</div>
+        <div>由于没有培养员工的知识和能力而造成的浪费</div>
+        <div>举例：日常只会循规蹈矩的工作</div>
+
+    </div>
+
+</div> 
+
+
+
+</body>  
+</html>
