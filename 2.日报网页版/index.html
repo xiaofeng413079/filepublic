@@ -1,0 +1,157 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+<meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  
+<title>FL CN Production 现场生产状态</title>  
+
+    <style>
+        html, body {  
+        height: 100%; /* 确保body高度与屏幕高度一致 */  
+        margin: 0; /* 移除默认边距 */  
+        }  
+        
+        .container {  
+        display: flex;  
+        justify-content: space-between; /* 水平分布子元素 */  
+        height: 5vh; /* 设置容器高度为屏幕高度的5% */  
+        align-items: center; /* 垂直居中子元素 */  
+        }  
+        
+        .left {  
+        display: flex;  
+        align-items: center; /* 垂直居中文字 */  
+        justify-content: left; /* 水平居中文字（如果需要） */  
+        flex: 1; /* 默认情况下，所有子元素平分剩余空间 */  
+        /* 由于我们想要中间元素占据更多空间，可以稍后调整它的flex属性 */  
+        }  
+        
+        .right {  
+        display: flex;  
+        align-items: center; /* 垂直居中文字 */  
+        justify-content: RIGHT; /* 水平居中文字（如果需要） */  
+        flex: 1; /* 默认情况下，所有子元素平分剩余空间 */  
+        /* 由于我们想要中间元素占据更多空间，可以稍后调整它的flex属性 */  
+        }  
+
+        .center {  
+            display: flex;  
+            align-items: center; /* 垂直居中文字 */  
+            justify-content: center; /* 水平居中文字（如果需要） */  
+            flex: 1; /* 默认情况下，所有子元素平分剩余空间 */  
+            /* 由于我们想要中间元素占据更多空间，可以稍后调整它的flex属性 */  
+        }  
+
+        .left span, .right span {  
+            font-size: calc(5vh * 0.4 * 0.8); /* 假设容器高度5vh, 文字占50%, 再考虑行高因素调整（0.8为行高调整系数） */  
+            line-height: calc(5vh * 0.); /* 行高设为容器高度的50% */  
+        }  
+        
+        .center {  
+        flex: 2; /* 中间元素占据两倍于两边的空间 */  
+        }  
+        
+        .center span {  
+        font-size: calc(5vh * 0.8 * 0.8); /* 文字占容器的80%，再考虑行高因素调整 */  
+        line-height: calc(5vh * 0.8); /* 行高设为容器高度的80% */  
+        }  
+        
+        /* 样式美化，非必需 */  
+        .container { background-color: lightblue; }  
+        /* .center { background-color: lightgreen; }   */
+        /* .right { background-color: lightcoral; } */
+
+        .iframe-container {  
+    display: flex; /* 使用flex布局 */  
+    margin: 0;  
+    padding: 0;  
+    width: 100%; /* 容器宽度占满整个视口 */  
+    height: 95vh; /* 容器高度占视口的95% */  
+    overflow: hidden; /* 防止滚动条出现 */  
+}  
+  
+/* 设置第一个 iframe，占宽度的80% */  
+.iframe-a {  
+    width: 80%;  
+    height: 100%; /* 高度占满容器 */  
+    border: none; /* 移除 iframe 边框 */  
+}  
+  
+/* 设置第二个 iframe，占宽度的20% */  
+.iframe-b {  
+    width: 20%;  
+    height: 100%; /* 高度占满容器 */  
+    border: none; /* 移除 iframe 边框 */  
+}
+
+
+    </style>
+
+    <script>  
+        // function updateHTML() {  
+        //     const now = new Date();  
+        //     const minutes = now.getMinutes();  
+
+        //         // 使用数组和includes简化分钟检查  
+        //     if ([45].includes(minutes)) {  
+        //         // 重新加载整个网页  
+        //         location.reload();  
+        //     }  
+        // }  
+
+        // // 等待DOM完全加载后再执行  
+        // document.addEventListener('DOMContentLoaded', (event) => {  
+        //     // 立即执行一次以检查是否需要更新  
+        //     updateHTML();  
+        //     // 设置每分钟检查一次  
+        //     setInterval(updateHTML, 60000);  
+        // });
+        
+            // JavaScript function to get the current time and display it in the div  
+        function displayCurrentTime() {  
+            const now = new Date();  
+            const currentTime = now.toLocaleString(); // Adjust this to your locale if needed  
+            document.getElementById('time').innerText = `${currentTime}`;  
+        }  
+  
+        // Run the function when the page loads  
+        window.onload = displayCurrentTime;  
+  
+        // Optionally, update the time every second (1000 milliseconds)  
+        setInterval(displayCurrentTime, 1000);  
+            
+        
+    </script>
+
+</head>  
+<body>  
+    <div class="container">  
+        <div class="left">  
+            <span>  <p></p></span>
+
+            <!-- <span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUQTNGS0ZONzI1VVNUVlpTRUFQVDlHU0tURy4u" target="_blank" title="Muda提交" rel="nofollow">延期登记</a></span>   -->
+            <!-- <span>|</span>
+            <span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUMktXSkxQWDlZUllNWk1YREdNR09JVEszUi4u" target="_blank" title="Muda提交" rel="nofollow">延期登记</a></span>  
+            <span>|</span>
+            <span><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=qfLaUnM7pE2saj-BrckrftLu5SqUC6lJpRS74TYytDJUMktXSkxQWDlZUllNWk1YREdNR09JVEszUi4u" target="_blank" title="Muda提交" rel="nofollow">延期登记</a></span>   -->
+        </div>  
+
+        <div class="center">  
+            <span>FL CN Production 现场生产状态</span>  
+        </div>  
+
+        <div class="right">  
+            <span id="time"></span>  
+        </div>  
+    </div>  
+
+
+<div class="iframe-container">  
+    <iframe class="iframe-a" src="https://app.powerbi.com/reportEmbed?reportId=c957af72-1c79-4343-b5c1-b7f822530496&autoAuth=true&ctid=52daf2a9-3b73-4da4-ac6a-3f81adc92b7e"></iframe>  
+    <iframe class="iframe-b" src="https://eh-chatgpt.endress.com/"></iframe>  
+</div> 
+
+
+
+</body>  
+</html>
